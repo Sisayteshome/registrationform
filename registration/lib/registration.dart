@@ -49,17 +49,18 @@ class _RegistrationFormState extends State<RegistrationForm> {
             },
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Last Name'),
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter your last name';
-              }
-              return null;
-            },
-            onChanged: (value) {
-              _lastName = value;
-            },
-          ),
+  decoration: InputDecoration(labelText: 'Last Name'),
+  validator: (value) {
+    if (value!.isEmpty) {
+      return 'Please enter your last name';
+    }
+    return null;
+  },
+  onChanged: (value) {
+    _lastName = value;
+  },
+),
+
           TextFormField(
             decoration: InputDecoration(labelText: 'Email'),
             validator: (value) {
