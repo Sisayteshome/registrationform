@@ -78,20 +78,24 @@ TextFormField(
 ),
 
 // ...
-          TextFormField(
-            decoration: InputDecoration(labelText: 'Password'),
-            obscureText: true,
-            controller: _passwordController,
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter a password';
-              }
-              return null;
-            },
-            onChanged: (value) {
-              _password = value;
-            },
-          ),
+         // ...
+
+TextFormField(
+  decoration: InputDecoration(labelText: 'Password'),
+  obscureText: true,
+  controller: _passwordController,
+  validator: (value) {
+    if (value!.isEmpty) {
+      return 'Please enter a password';
+    }
+    return null;
+  },
+  onChanged: (value) {
+    _password = value;
+  },
+),
+
+// ...
           TextFormField(
             decoration: InputDecoration(labelText: 'Retype Password'),
             obscureText: true,
