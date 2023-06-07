@@ -9,8 +9,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Registration Form',
       home: Scaffold(
+        
         appBar: AppBar(
           title: Text('New User'),
         ),
