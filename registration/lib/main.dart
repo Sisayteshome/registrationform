@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Registration Form',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Registration Form'),
+          title: Text('New User'),
         ),
         body: Padding(
           padding: EdgeInsets.all(16.0),
