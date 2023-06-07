@@ -61,19 +61,23 @@ class _RegistrationFormState extends State<RegistrationForm> {
   },
 ),
 
-          TextFormField(
-            decoration: InputDecoration(labelText: 'Email'),
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter your email';
-              }
-              // You can add more email validation logic if needed
-              return null;
-            },
-            onChanged: (value) {
-              _email = value;
-            },
-          ),
+        // ...
+
+TextFormField(
+  decoration: InputDecoration(labelText: 'Email'),
+  validator: (value) {
+    if (value!.isEmpty) {
+      return 'Please enter your email';
+    }
+    // You can add more email validation logic if needed
+    return null;
+  },
+  onChanged: (value) {
+    _email = value;
+  },
+),
+
+// ...
           TextFormField(
             decoration: InputDecoration(labelText: 'Password'),
             obscureText: true,
