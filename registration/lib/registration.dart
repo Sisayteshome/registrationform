@@ -66,32 +66,22 @@ class _RegistrationFormState extends State<RegistrationForm> {
           // ...
 
 TextFormField(
-  decoration: InputDecoration(labelText: 'Email'),
-  validator: (value) {
-    if (value!.isEmpty) {
-      return 'Please enter your email';
-    }
-    if (!_isEmailValid(value)) {
-      return 'Please enter a valid email';
-    }
-    return null;
-  },
-  onChanged: (value) {
-    _email = value;
-  },
-),
-
-// ...
-
-bool _isEmailValid(String email) {
-  final emailRegExp = RegExp(r'^[\w-]+(\.[\w-]+)*@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*(\.[a-zA-Z]{2,})$');
-  return emailRegExp.hasMatch(email);
-}
-
-// ...
-          // ...
-
-// ...
+                decoration: InputDecoration(labelText: 'Email'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  if (!value.contains(RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$'))) {
+                    return 'Invalid email format';
+                  }
+                  return null;
+                },
+                onChanged: (value) {
+                  setState(() {
+                    _email = value;
+                  });
+                },
+              ),
 
           TextFormField(
   decoration: InputDecoration(labelText: 'Password'),
