@@ -94,31 +94,31 @@ bool _isEmailValid(String email) {
 // ...
 
           TextFormField(
-            decoration: InputDecoration(labelText: 'Password'),
-            obscureText: true,
-            controller: _passwordController,
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter a password';
-              }
-              if (value.length < 8) {
-                return 'Password must be at least 8 characters long';
-              }
-              if (!value.contains(RegExp(r'[A-Z]'))) {
-                return 'Password must contain at least one uppercase letter';
-              }
-              if (!value.contains(RegExp(r'[a-z]'))) {
-                return 'Password must contain at least one lowercase letter';
-              }
-              if (!value.contains(RegExp(r'[0-9]'))) {
-                return 'Password must contain at least one number';
-              }
-              return null;
-            },
-            onChanged: (value) {
-              _password = value;
-            },
-          ),
+  decoration: InputDecoration(labelText: 'Password'),
+  obscureText: true,
+  controller: _passwordController,
+  validator: (value) {
+    if (value!.isEmpty) {
+      return 'Please enter a password';
+    }
+    if (value.length < 8) {
+      return 'Password must be at least 8 characters long';
+    }
+    if (!value.contains(RegExp(r'[A-Z]'))) {
+      return 'Password must contain at least one uppercase letter';
+    }
+    if (!value.contains(RegExp(r'[a-z]'))) {
+      return 'Password must contain at least one lowercase letter';
+    }
+    if (!value.contains(RegExp(r'[0-9]'))) {
+      return 'Password must contain at least one number';
+    }
+    return null;
+  },
+  onChanged: (value) {
+    _password = value;
+  },
+),
 
 // ...
           TextFormField(
